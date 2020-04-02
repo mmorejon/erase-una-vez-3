@@ -24,9 +24,9 @@ hostname: b82fdc7f3901 - total de ficheros: 2
 
 El funcionamiento de la aplicación puede ser modificado a través de variables de entorno:
 
-|Variable de entorno|Descripción|
-|-------------------|:----------|
-|`SLEEP_TIME`| Modifica el intervalo de tiempo entre mensajes.|
+|Variable de entorno|Descripción|Valor por defecto|
+|-------------------|-----------|-----------------|
+|`SLEEP_TIME`| Modifica el intervalo de tiempo entre mensajes. En segundos.| 5 |
 
 ```bash
 docker container run --rm \
