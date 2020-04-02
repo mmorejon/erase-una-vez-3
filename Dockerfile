@@ -12,7 +12,7 @@ COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-w -s" -a -installsuffix cgo -o /go/bin/erase-una-vez-3 .
 
 # build a small image
-FROM alpine:3.11.2
+FROM alpine:3.11.3
 LABEL description="Aplicación de ejemplo para el libro Érase una vez Kubernetes."
 LABEL language="golang"
 # copy the static executable
