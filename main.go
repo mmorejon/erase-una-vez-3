@@ -10,7 +10,7 @@ import (
 )
 
 var (
-	folderPath string = "/srv/eraseunavez"
+	folderPath string = "/srv/erase-una-vez"
 	sleepTime  int    = 5
 )
 

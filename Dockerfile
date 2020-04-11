@@ -17,12 +17,5 @@ LABEL description="Aplicación de ejemplo para el libro Érase una vez Kubernete
 LABEL language="golang"
 # copy the static executable
 COPY --from=builder /go/bin/erase-una-vez-3 /go/bin/erase-una-vez-3
-# Create appuser.
-RUN adduser -D -g '' elf
-# create directory
-RUN mkdir /srv/eraseunavez && \
-    chown -R elf:elf /srv/eraseunavez
-# use an unprivileged user.
-USER elf
 # run app
 ENTRYPOINT ["/go/bin/erase-una-vez-3"]
