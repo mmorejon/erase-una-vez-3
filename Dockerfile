@@ -14,6 +14,7 @@ RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-w -s" -a -installsuffix cgo -o 
 # build a small image
 FROM alpine:3.11.3
 LABEL language="golang"
+LABEL org.opencontainers.image.source https://github.com/mmorejon/erase-una-vez-3
 # copy the static executable
 COPY --from=builder /go/bin/erase-una-vez-3 /go/bin/erase-una-vez-3
 # run app
