@@ -1,5 +1,5 @@
-# golang alpine 1.13.5-alpine
-FROM golang:1.13.5-alpine AS builder
+# golang alpine
+FROM golang:1.16.2-alpine AS builder
 # Create workspace
 WORKDIR /opt/app/
 COPY go.mod .
@@ -12,10 +12,10 @@ COPY . .
 RUN CGO_ENABLED=0 GOOS=linux go build -ldflags="-w -s" -a -installsuffix cgo -o /go/bin/erase-una-vez-3 .
 
 # build a small image
-FROM alpine:3.11.3
+FROM alpine:3.13.2
 LABEL language="golang"
 LABEL org.opencontainers.image.source https://github.com/mmorejon/erase-una-vez-3
 # copy the static executable
-COPY --from=builder /go/bin/erase-una-vez-3 /go/bin/erase-una-vez-3
+COPY --from=builder /go/bin/erase-una-vez-3 /usr/local/bin/erase-una-vez-3
 # run app
-ENTRYPOINT ["/go/bin/erase-una-vez-3"]
+ENTRYPOINT ["erase-una-vez-3"]
