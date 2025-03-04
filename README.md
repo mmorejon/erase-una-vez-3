@@ -13,7 +13,7 @@ Es un ejemplo sencillo utilizado en múltiples secciones del libro.
 Para ver su funcionamiento utilice el siguiente comando:
 
 ```bash
-docker container run --rm mmorejon/erase-una-vez-3:0.1.0
+docker container run --rm ghcr.io/mmorejon/erase-una-vez-3:v0.2.1
 
 hostname: b82fdc7f3901 - total de ficheros: 0
 hostname: b82fdc7f3901 - total de ficheros: 1
@@ -31,7 +31,7 @@ El funcionamiento de la aplicación puede ser modificado a través de variables 
 ```bash
 docker container run --rm \
   --env SLEEP_TIME=3
-  mmorejon/erase-una-vez-3:0.1.0
+  ghcr.io/mmorejon/erase-una-vez-3:v0.2.1
 
 hostname: b82fdc7f3901 - total de ficheros: 0
 hostname: b82fdc7f3901 - total de ficheros: 1
