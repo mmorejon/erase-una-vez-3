@@ -21,6 +21,11 @@ func main() {
 			log.Fatalln("Error al obtener el hostname.")
 		}
 
+		// create folder if it doesn't exist
+		if err := os.MkdirAll(folderPath, 0755); err != nil {
+			log.Fatal(err)
+		}
+
 		// count files in folder
 		files, err := os.ReadDir(folderPath)
 		if err != nil {
