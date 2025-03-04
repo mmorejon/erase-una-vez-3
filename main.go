@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"io/ioutil"
 	"log"
 	"os"
 	"strconv"
@@ -23,7 +22,7 @@ func main() {
 		}
 
 		// count files in folder
-		files, err := ioutil.ReadDir(folderPath)
+		files, err := os.ReadDir(folderPath)
 		if err != nil {
 			log.Fatal(err)
 		}
