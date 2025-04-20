@@ -2,6 +2,8 @@
 
 Aplicación Golang utilizada en los ejercicios del libro [Érase una vez Kubernetes](https://leanpub.com/erase-una-vez-kubernetes).
 
+Translation: [English](README_en.md)
+
 ## Descripción
 
 La aplicación consulta el número de ficheros existentes en el directorio `/srv/eraseunavez` e imprime un mensaje con esta información en la consola. Después de imprimir el mensaje crea un nuevo fichero utilizando el nombre y la fecha de la máquina.
